@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
   const app = document.querySelector('#app');
 
   async function getNetworkDownloadSpeed() {
-    var baseUrl = 'http://eu.httpbin.org/stream-bytes/50000000';
+    var baseUrl = 'https://eu.httpbin.org/stream-bytes/50000000';
     var fileSize = 500000;
     var speed = await testNetworkSpeed.checkDownloadSpeed(baseUrl, fileSize);
     const { bps, kbps, mbps } = speed;
