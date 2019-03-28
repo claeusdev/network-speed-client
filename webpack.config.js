@@ -7,7 +7,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [{ test: /\.js$/, loader: 'babel-loader' }]
+    rules: [
+      { test: /\.js$/, loader: 'babel-loader' },
+      { test: /\.css$/, use: ['css-loader'] }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
